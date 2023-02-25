@@ -1,0 +1,202 @@
+.button-main {
+    border: 1px solid rgb(179, 178, 178);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.button-main:hover {
+    outline: none !important;
+    border: 1px solid #0b93ff;
+    color: #0b93ff;
+}
+
+.button-sidbar{
+    height: 3%;
+}
+.body {
+    background-color: #F0F2F5;
+}
+
+/* <!---------------------------------- Menu ---------------------------------------------> */
+.navbar {
+    background-color: #1E2029;
+    height: auto;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    background-color: #1E2029;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 8%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: #0b93ff;
+}
+
+.show {
+    display: block;
+}
+
+.menu img {
+    width: 40%;
+}
+
+.buttonGo {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #1E2029;
+    color: white;
+    height: 90%;
+    margin: .5% 0% 0 0;
+    padding-bottom: .5%;
+    font-size: small;
+}
+
+.buttonGo:hover {
+    border: 1px solid #0b93ff;
+    color: #0b93ff;
+}
+
+.logo img {
+    width: 80%;
+}
+
+/* <!----------------------------------- Sidbar -------------------------------------------------> */
+aside {
+    border-left: 1px solid rgb(203, 202, 202);
+    height: auto;
+}
+
+aside button {
+    border: 1px solid rgb(222, 219, 219);
+    color: #262626;
+    font-size: 14px;
+    height: 7%;
+}
+
+aside button a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #262626;
+}
+
+aside button a:hover {
+    color: #0b93ff;
+    cursor: pointer;
+}
+
+.Email,
+.subscription {
+    background-color: #F2F3F6;
+    font-size: smaller;
+}
+
+.subscription {
+    width: 12%;
+}
+
+/*------------------------------------------------------- Main -------------------------------------------------------------*/
+
+.Free-subscription {
+    text-decoration: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    height: 80%;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ---------------------------------------- Responsive -----------------------------*/
+@media (max-width:850px) {
+    .dropdown {
+        width: 25%;
+    }
+    
+    .main aside button {
+        font-size: 70%;
+    }
+
+    .main aside button a {
+        font-size: 110%;
+    }
+}

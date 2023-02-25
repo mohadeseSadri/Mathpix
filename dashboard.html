@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css/dashboard.css">
+    <link rel="icon" href="./image/Untitled-1 copy.png">
+    <title>صفحه کاربری</title>
+</head>
+
+<body>
+    <!---------------------------------- Menu --------------------------------------------->
+    <div class="navbar">
+        <div class="container ">
+            <div class="menu d-flex w-75">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn rounded-circle"><img src="./image/imgAccont.jpg"
+                            alt="accont" class="rounded-circle"></button>
+                    <div id="myDropdown" class="dropdown-content mt-3">
+                        <a href="http://127.0.0.1:5501/dashboard.html">تنظیمات شخصی</a>
+                        <a href="http://127.0.0.1:5501/register.html">خروج از سیستم</a>
+                    </div>
+                </div>
+                <a href="http://127.0.0.1:5501/uploadFile.html"><button class="buttonGo text-nowrap">برو به اسنیپ
+                        وب</button>
+                </a>
+            </div>
+            <div class="logo">
+                <img src="./image/dashboardLogo.png" alt="logo">
+            </div>
+        </div>
+    </div>
+    <!----------------------------------- Sidbar ------------------------------------------------->
+    <div class="container">
+        <div class="main d-flex">
+            <aside class="pt-5">
+                <button class="w-100 bg-light text-end px-lg-3 text-nowrap">تنظیمات شخصی</button>
+                <button class="w-100 bg-light text-end px-lg-3 text-nowrap"><a
+                        href="http://127.0.0.1:5501/dashboard.html">صفحه
+                        کاربری</a></button>
+                <button class="w-100 bg-light text-end px-lg-3 text-nowrap"><a
+                        href="http://127.0.0.1:5501/changeSubscription.html">اشتراک</a></button>
+            </aside>
+            <!--------------------------- Main --------------------------------------------------->
+            <main class="w-75 p-5">
+                <h2>صفحه کاربری من</h2>
+                <hr>
+                <div class="d-lg-flex mt-4">
+                    <div class="d-flex">
+                        <p> ایمیل:</p>
+                        <p class="Email mx-2 px-3">Mohadesehsadr788@gmail.com</p>
+                    </div>
+                    <button class="main-btn bg-white rounded-2 px-3">باز نشانی رمز عبور</button>
+                    <button class="main-btn bg-white rounded-2 px-3 mx-2"
+                        onclick="document.getElementById('id01').style.display='block'">تغییر ایمیل</button>
+                </div>
+                <div id="id01" class="modal-update-email modal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="close icon-close-update-email px-3" title="Close Modal">&times;</span>
+                    <form action="action_page.php" method="post" class="modal-content-update-email ">
+                        <div class="container">
+                            <label for="uname" class="pt-4 label"><b>ایمیل حساب من را به روز کنید</b></label>
+                            <input type="text" placeholder="ایمیل جدید خود را وارد کنید" name="uname" required
+                                class="urername-update mt-4 w-100 py-1 mb-2">
+                            <button type="submit" class="button-update w-100 py-1 mb-4" onclick="clickFunc()">ایمیل
+                                تایید
+                                بفرست</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-lg-flex mt-2">
+                    <div class="d-flex">
+                        <p class="text-nowrap mt-2"> نام کاربری: </p>
+                        <p class="Email mx-2 px-3 mt-2">Mohadesehsadr788@gmail.com</p>
+                    </div>
+                    <button class="main-btn bg-white rounded-2 px-3"
+                        onclick="document.getElementById('id02').style.display='block'">بروزرسانی نام کاربری</button>
+                </div>
+                <div id="id02" class="modal-update-user modal">
+                    <span onclick="document.getElementById('id02').style.display='none'"
+                        class="close icon-close-update-user px-3" title="Close Modal">&times;</span>
+                    <form action="action_page.php" method="post" class="modal-content-update-user">
+                        <div class="container">
+                            <label for="uname" class="pt-4 label"><b>نام کاربری من را به روز کنید</b></label>
+                            <hr>
+                            <p class="warning mt-2 py-2 px-3">هشدار! هر پیوندی با نام کاربری قدیمی شما ارسال نخواهد شد.
+                            </p>
+                            <input type="text" placeholder="نام کاربری مورد نظر خود را وارد کنید" name="uname" required
+                                class="urername-update mt-4 w-100 py-1 mb-2">
+                            <button type="submit" class="button-update w-100 py-1 mb-4" onclick="clickFunc()">متوجه شدم،
+                                نام
+                                کاربری من را به روز کنید
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-lg-flex mt-2">
+                    <div class="d-flex">
+                        <p class="text-nowrap"> اشتراک اسنیپ: </p>
+                        <p class="subscription mx-2 px-3 text-nowrap w-50">طرح رایگان</p>
+                    </div>
+                    <a href="http://127.0.0.1:5501/changeSubscription.html"><button
+                            class="change-btn bg-white rounded-2 px-3">تغییر اشتراک</button>
+                    </a>
+                </div>
+                <div class="checkbox-privacy mt-2">
+                    <input type="checkbox" class="">
+                    <span class="px-2">Mathpix می تواند از تصاویر من برای بهبود فناوری OCR خود استفاده کند.</span>
+                    <a href="#">سیاست حفظ حریم خصوصی Mathpix را بخوانید.</a>
+                </div>
+                <h5 class="text-danger pt-5">پاک کردن حساب کاربری</h2>
+                    <hr>
+                    <p>هنگامی که حساب خود را حذف می کنید، دیگر راه برگشتی وجود ندارد. لطفا مطمئن باشید</p>
+                    <button class="delete-username rounded-2 px-3"
+                        onclick="document.getElementById('id03').style.display='block'">حذف نام کاربری شما</button>
+                    <div id="id03" class="modal-delete-acc modal">
+                        <span onclick="document.getElementById('id03').style.display='none'"
+                            class="close icon-close-delete-acc px-3" title="Close Modal">&times;</span>
+                        <form action="action_page.php" method="post" class="modal-content-delete-acc">
+                            <div class="container">
+                                <label for="uname" class="pt-4 label"><b>آیا مطمئنید که می خواهید این کار را انجام
+                                        دهید؟</b></label>
+                                <p class="warning mt-2 py-2 px-3">این بسیار مهم است. این یک اقدام غیرقابل برگشت است.</p>
+                                <p class="text-black" style="font-size: small;">دیگر نمی توانید با این ایمیل حساب کاربری
+                                    ایجاد کنید.</p>
+                                <hr>
+                                <label for="uname" class="pt-2 label"><b>لطفا ایمیل خود را برای حذف حساب خود تایپ
+                                        کنید:</b></label>
+                                <input type="text" placeholder="نام کاربری مورد نظر خود را وارد کنید" name="uname"
+                                    required class="delete-accont-username mt-3 w-100 py-1 mb-2">
+                                <p class="mt-2" style="font-size: small;">برای تأیید، <span class="text-danger"
+                                        style="font-size: small;"> delete my account </span> را در زیر تایپ کنید:</p>
+                                <input type="text" name="uname" required class="urername-update w-100 py-1 mb-2">
+                                <button type="submit" class="button-delete-accont w-100 py-1 mb-4"
+                                    onclick="clickFunc()"> متوجه شدم،
+                                    اکانت من را حذف کنید
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+            </main>
+        </div>
+    </div>
+    <script src="./style.css/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="./main.js/dashboard.js"></script>
+</body>
+
+</html>

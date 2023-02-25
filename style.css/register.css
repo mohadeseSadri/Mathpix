@@ -1,0 +1,192 @@
+.body {
+    background-color: #F0F2F5;
+}
+
+.form-check-label {
+    font-size: 12px;
+}
+
+.link-forget {
+    text-decoration: none;
+}
+
+.img-logo {
+    width: 5%;
+}
+
+.login {
+    border: 1px solid #ecf0f4;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 #bac0c5;
+    width: 25%;
+    margin: auto;
+}
+
+.signUp {
+    border: 1px solid rgb(209, 206, 206);
+    border-radius: 5px;
+    width: 25%;
+    margin: auto;
+    color: #868789;
+}
+
+.more a {
+    text-decoration: none;
+    color: rgb(52, 51, 51);
+    padding-left: .7%;
+}
+
+.login ::placeholder {
+    color: #bac0c5;
+}
+
+.icon-message {
+    position: relative;
+    display: inline-block;
+    width: 92%;
+}
+
+.icon-message i {
+    position: absolute;
+    right: 0;
+    color: #868789;
+    font-size: 20px;
+}
+
+.icon-lock {
+    position: relative;
+    display: inline-block;
+    
+    width: 92%;
+}
+
+.icon-lock i {
+    position: absolute;
+    right: 0;
+    font-size: 25px;
+    color: #868789;
+}
+
+.toggle-password {
+    position: absolute;
+    width: 30px;
+    top: 5px;
+    left: 0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    cursor: pointer;
+}
+ 
+.active .fa-eye {
+    display: none;
+    left: 0;
+}
+
+.fa-eye-slash {
+    display: none;
+    left: 0;
+}
+
+.active .fa-eye-slash {
+    display: inline;
+    left: 0;
+}
+
+.fa-spinner{
+    display: none;
+}
+
+button[type=submit] {
+    width: 92%;
+    margin-left: 3.5%;
+}
+
+.signUp a {
+    text-decoration: none;
+}
+
+.checkbox-privacy {
+    font-size: small;
+}
+
+.check-terms{
+    font-size: small;
+}
+/* responsive */
+@media (min-width:370px) {
+    .login {
+        width: 80%;
+    }
+
+    .signUp {
+        width: 80%;
+    }
+
+    footer {
+        margin-top: 25%;
+    }
+
+    footer img {
+        width: 5%;
+    }
+}
+
+@media (min-width:610px) {
+    footer {
+        margin-top: 20%;
+    }
+
+    footer img {
+        width: 3%;
+    }
+}
+
+@media (min-width:760px) {
+    .login {
+        width: 70%;
+    }
+
+    .signUp {
+        width: 70%;
+    }
+}
+
+@media (min-width:830px) {
+    footer {
+        margin-top: 10%;
+    }
+
+    footer img {
+        width: 3%;
+    }
+}
+
+@media (min-width:900px) {
+    .login {
+        width: 50%;
+    }
+
+    .signUp {
+        width: 50%;
+    }
+}
+
+@media (min-width:1200px) {
+    .login {
+        width: 35%;
+    }
+
+    .signUp {
+        width: 35%;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+
+    footer img {
+        width: 2.2%;
+    }
+}

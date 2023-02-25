@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css/uploadFile.css">
+    <link rel="icon" href="./image/Untitled-1 copy.png">
+    <title>بارگذاری فایل ها</title>
+</head>
+
+<body>
+    <!---------------------------------------------------------- Menu ----------------------------------------------------------------->
+    <div class="menu d-none d-lg-flex flex-column">
+        <img src="./image/Logo-upload-file.png" alt="Logo-upload-file" title="Your Notes">
+        <div class="flex-column px-3 mt-2 icon-file-text"><a title="All Notes" class="fa fa-file-text-o file-text"
+                style="font-size:24px"></a></div>
+        <div class="flex-column px-3 mt-3 icon-file-pdf"><a title="All PDFs" class="fa fa-file-pdf-o file-pdf"
+                style="font-size:24px"></a></div>
+        <div class="flex-column px-3 mt-3 icon-file-snip"><a title="All Snips" class="fa fa-file-o file-snip"
+                style="font-size:24px"></a></div>
+        <div class="flex-column px-3 mt-3 icon-file-article"><a title="All Articles"
+                class="fa fa-file-image-o file-article" style="font-size:24px"></a>
+        </div>
+        <div class="fixed-bottom">
+            <div class="flex-column px-3 pt-2 icon-setting">
+                <a title="Setting" class="fa fa-cog pt-5 " style="font-size:24px"
+                    onclick="document.getElementById('id01').style.display='block'">
+                </a>
+            </div>
+            <div id="id01" class="modal-setting modal">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="close icon-close-setting px-3" title="Close Modal">&times;</span>
+                <form action="action_page.php" method="post" class="modal-content-setting ">
+                    <div class="container mx-3 py-3">
+                        <div class="d-flex flex-column">
+                            <h4>ویرایش تنظیمات</h4>
+                            <div><input type="checkbox" class="mt-3"> نمایش شماره ی خط</div>
+                            <div><input type="checkbox" class="mt-3"> حالت تاریک</div>
+                            <div><input type="checkbox" class="mt-3"> همگام سازی پیمایش </div>
+                            <div><input type="checkbox" class="mt-3"> تبدیل گفتار به ریاضی</div>
+                        </div>
+                        <div class="d-flex flex-column mt-3">
+                            <label>اندازه زبانه :</label>
+                            <input type="number" class="w-75 tab-size">
+                        </div>
+                        <h5 class="mt-4">تنظیمات LaTeX</h5>
+                        <div class="d-flex flex-column">
+                            <label class="mt-3">جداکننده های ریاضی درون خطی</label>
+                            <input type="text" placeholder="$ ... $" class="w-75 Inline-math">
+                            <label class="mt-3">بلوک جداکننده های ریاضی
+                                <span style="color: gray;">(شمرده
+                                    نشده)
+                                </span>
+                            </label>
+                            <input type="text" placeholder="$$ ... $$" class="w-75 Block-math">
+                            <label class="mt-3"> بلوک جداکننده های ریاضی<span style="color: gray;">(شمرده نشده)</span></label>
+                            <input type="text" placeholder="شروع معادله" class="w-75 Block-math">
+                        </div>
+                        <div>
+                            <h5 class="mt-4">تنظیمات PDF</h5>
+                            <input type="checkbox"> هر بار که یک PDF پردازش می شود، از من در مورد گزینه های صادرات PDF
+                            بپرسید.
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="flex-column">
+                <div class="d-flex justify-content-between account">
+                    <a class="dropbtn flex-column" onclick="accountFunction()">
+                        <img title="Accont" src="./image/imgAccont.jpg" alt="accont"
+                            class="rounded-circle mx-2 mt-4 mb-4 dropbtn-account">
+                    </a>
+                    <div id="myDropdown-account" class="dropdown-content-account mt-5 fixed-bottom mb-2"
+                        onclick="accountFunction()">
+                        <a href="" class="active">حساب کاربری</a>
+                        <a href="">خروج از سیستم</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------- Sidbar ---------------------------------------------------------------->
+    <div class="main d-flex">
+        <div class="main-bar d-none d-lg-flex">
+            <div class="all-files">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-5 mt-2 px-3">یادداشت</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                    <input type="text" class="search px-3 py-1 w-75" placeholder="جستجو...">
+                </div>
+                <div class="d-flex justify-content-between files">
+                    <button class="button-files mx-5 mt-1 px-3 dropbtn" onclick="myFunction()"> فایل ها</button>
+                    <button class="icon-all-files">
+                        <span class="fa fa-sort-desc mt-1 dropbtn" onclick="myFunction()"></span>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content mt-5">
+                        <a href="" class="active"> فایل ها</a>
+                        <a href="">متعلق به من</a>
+                        <a href="">به اشتراک گذاشته شده با من</a>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-file">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-5 mt-2 px-3 text-nowrap">فایل پی دی اف</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                    <input type="text" class="search px-3 py-1 w-75" placeholder="جستجو...">
+                </div>
+                <p class="px-3 py-4 mt-3">یک فایل را اینجا رها کنید یا از رایانه خود آپلودکنید.<input type="file"
+                        class="w-100 mt-2">
+                </p>
+            </div>
+            <div class="all-snip">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-5 mt-2 px-3 text-nowrap">اسنیپ</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                </div>
+                <p class="px-3 py-4 mt-3">یک فایل را اینجا رها کنید یا از رایانه خود آپلودکنید.<input type="file"
+                        class="w-100 mt-2">
+                </p>
+            </div>
+            <div class="all-articles">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-5 mt-2 px-3 text-nowrap">مقالات</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                </div>
+                <div class="">
+                    <div class="d-flex justify-content-between">
+                        <button class="button-files mx-5 mt-1 px-3 dropbtn text-nowrap" onclick="">پیش نویس</button>
+                        <button class="icon-all-files">
+                            <span class="fa fa-sort-desc mt-1 dropbtn" onclick=""></span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button class="button-files mx-5 mt-1 px-3 dropbtn text-nowrap" onclick="">منتشر شده</button>
+                        <button class="icon-all-files">
+                            <span class="fa fa-sort-desc mt-1 dropbtn" onclick=""></span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-between account">
+                        <button class="icon-account">
+                            <span class="fa fa-sort-desc mt-1 dropbtn-account" onclick="accountFunction()"></span>
+                        </button>
+                        <div id="myDropdown-account" class="dropdown-content-account mt-5">
+                            <a href="" class="active">حساب کاربری</a>
+                            <a href="">خروج از سیستم</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------------------- Main ----------------------------------------------------------->
+
+        <main>
+            <div class="menu-notes-sm d-lg-none w-25">
+                <h5 class="mt-3 mx-4">یادداشت</h5>
+                <i class="fa fa-angle-left mt-2" style="font-size:40px"></i>
+            </div>
+            <div class="menu-icon-sm d-md-none mx-3 ">
+                <div class="px-5 py-2 mt-3 icon-file-text-sm"><a title="All Notes"
+                        class="fa fa-file-text-o file-text-sm" style="font-size:24px"></a></div>
+                <div class="px-5 py-2 mt-3 icon-file-pdf-sm"><a title="All PDFs" class="fa fa-file-pdf-o file-pdf-sm"
+                        style="font-size:24px"></a></div>
+                <div class="px-5 py-2 mt-3 icon-file-article-sm"><a title="All Articles"
+                        class="fa fa-file-image-o file-article-sm" style="font-size:24px"></a>
+                </div>
+                <div class="px-5 py-2 mt-3 icon-contact-sm"><a title="All Articles"
+                        class="fa fa-user-circle-o contact-sm" style="font-size:24px"></a>
+                </div>
+            </div>
+            <hr class="mt-5 mb-0">
+            <div class="all-files-sm d-lg-none">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-4 mt-2 ">یادداشت</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                    <input type="text" class="search-sm px-3 py-1 w-75 mx-4 mb-4" placeholder="جستجو...">
+                </div>
+                <div class="d-flex justify-content-between files">
+                    <button class="button-files mt-1 px-3 dropbtn-sm" onclick="myFunctionSm()"> فایل ها</button>
+                    <button class="icon-all-files">
+                        <span class="fa fa-sort-desc mt-1 dropbtn-sm" onclick="myFunctionSm()"></span>
+                    </button>
+                    <div id="myDropdown-sm" class="dropdown-content-sm mt-5">
+                        <a href="" class="active"> فایل ها</a>
+                        <a href="">متعلق به من</a>
+                        <a href="">به اشتراک گذاشته شده با من</a>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-file-sm">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="mx-3 mt-2 text-nowrap">فایل پی دی اف</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                    <input type="text" class="search-sm px-3 py-1 w-75 mx-3 mb-4" placeholder="جستجو...">
+                </div>
+                <p class="px-3 mt-3">یک فایل را اینجا رها کنید یا از رایانه خود آپلودکنید.<input type="file"></p>
+            </div>
+            <div class="all-articles-sm">
+                <div class="aside">
+                    <aside class="d-flex justify-content-between">
+                        <h5 class="py-2 px-3 text-nowrap">اسنیپ</h5>
+                        <span class="glyphicon glyphicon-plus mt-4 mx-4" style="font-size: x-large;"></span>
+                    </aside>
+                </div>
+                <p class="px-3 mt-3">یک فایل را اینجا رها کنید یا از رایانه خود آپلودکنید.<input type="file"></p>
+            </div>
+
+            <div class="container welcom">
+                <h1 class="mt-5 mx-5 text-nowrap">به اسنیپ وب خوش آمدید!</h1>
+                <p class="mx-5 mt-4">خوشحالم که اینجا هستید! اگر کنجکاو هستید که چگونه Mathpix به شما در ایجاد اسناد
+                    آکادمیک
+                    و فنی کمک می کند، در جای درستی هستید.
+                    این Snip Web است که ابزار Mathpix برای ایجاد اسناد، قالب‌بندی، تبدیل فرمت و انتشار است که توسط
+                    Mathpix Markdown ارائه شده است.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script src="./style.css/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="./main.js/upload.js"></script>
+</body>
+
+</html>

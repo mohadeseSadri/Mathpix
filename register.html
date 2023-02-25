@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css/register.css">
+    <link rel="icon" href="./image/Untitled-1 copy.png">
+    <title>ثبت نام</title>
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="logo d-flex justify-content-center mt-5">
+            <img src="./image/Logo.png" alt="Logo" class="img-logo img-fluid rounded d-flex justify-content-center">
+        </div>
+
+        <div class="login bg-white mt-3">
+            <form action="/action_page.php" class="">
+                <h3 class="text-center pt-3">ثبت نام</h3>
+                <div class="mb-3 mt-3 icon-message">
+                    <i class="fa fa-envelope pt-2 px-4"></i>
+                    <input type="email" class="form-control px-5 mx-3" id="email"
+                        placeholder="آدرس ایمیل خود را وارد کنید." name="email">
+                </div>
+                <div class="mb-3 icon-lock">
+                    <i class="fa fa-lock pt-2 px-4"></i>
+                    <input type="password" class="form-control px-5 mx-3" id="password-field"
+                        placeholder="ساخت رمز عبور" name="pswd">
+                    <div class="toggle-password">
+                        <i class="fa fa-eye-slash"></i>
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+                <div class="checkbox-privacy px-3">
+                    <input type="checkbox" class="px-1"> Mathpix می تواند از تصاویر من برای بهبود فناوری OCR خود استفاده کند.
+                    <a href="#">سیاست حفظ حریم خصوصی Mathpix را بخوانید</a>
+                </div>
+                <div class="check-terms d-flex px-3 pt-3">
+                    <input type="checkbox"> من با Mathpix موافقم
+                    <a href="#" class="px-2">شرایط و ضوابط</a>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 mt-3 mx-3"> ثبت نام <i
+                        class="fa fa-spinner fa-pulse"></i></button>
+            </form>
+        </div>
+        <div class="signUp d-flex justify-content-center mt-4 pt-3 text-nowrap">
+            <p class="">قبلاً یک حساب کاربری داشتید</p>
+            <a href="http://127.0.0.1:5501/login.html" class="px-1">ورود</a>
+        </div>
+    </div>
+    <footer>
+        <div class="d-flex justify-content-center n">
+            <img src="./image/logo.footer.png" alt="logo.footer">
+        </div>
+        <div class="more d-flex justify-content-center ">
+            <a href="#">Privacy | </a>
+            <a href="#">Mathpix 2022 | </a>
+            <a href="#">contact us</a>
+        </div>
+
+
+    </footer>
+    <script src="./style.css/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="./main.js/login.js"></script>
+    <script>
+        var iconLoading = document.querySelector(".fa-spinner")
+        iconLoading.addEventListener("click", function () {
+            iconLoading.style.diplaye = 'inline'
+        })
+    </script>
+</body>
+
+</html>

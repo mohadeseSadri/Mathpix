@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./style.css/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css/login.css">
+    <link rel="icon" href="./image/Untitled-1 copy.png">
+    <title>ورود</title>
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="logo d-flex justify-content-center mt-5">
+            <img src="./image/Logo.png" alt="Logo" class="img-logo img-fluid rounded d-flex justify-content-center">
+        </div>
+
+        <div class="login bg-white mt-3">
+            <form action="/action_page.php" class="">
+                <h3 class="text-center pt-3">ورود</h3>
+                <div class="mb-3 mt-3 icon-message">
+                    <i class="fa fa-envelope pt-2 px-4"></i>
+                    <input type="email" class="form-control px-5 mx-3" id="email"
+                        placeholder="آدرس ایمیل خود را وارد کنید." name="email">
+                </div>
+                <div class="mb-3 icon-lock">
+                    <i class="fa fa-lock pt-2 px-4"></i>
+                    <input type="password" class="form-control px-5 mx-3" id="password-field" placeholder="رمز عبور"
+                        name="pswd">
+                    <div class="toggle-password">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-eye-slash"></i>
+                    </div>
+                </div>
+                <div class="form-check mb-3 text-end">
+                    <label class="form-check-label">
+                        <a href="#" class="link-forget px-3 text-nowrap">رمز عبور خود را فراموش کرده اید؟</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 mx-3"><a href="" class="text-white"
+                        style="text-decoration: none;">ورود </a><i class="fa fa-spinner fa-pulse"></i></button>
+            </form>
+        </div>
+        <div class="signUp d-flex justify-content-center mt-4 pt-3 text-nowrap">
+            <p class="">هنوز اکانت ندارید؟</p>
+            <a href="http://127.0.0.1:5501/register.html" class="px-1">ثبت نام</a>
+        </div>
+    </div>
+    <footer>
+        <div class="d-flex justify-content-center n">
+            <img src="./image/logo.footer.png" alt="logo.footer">
+        </div>
+        <div class="more d-flex justify-content-center ">
+            <a href="#">Privacy | </a>
+            <a href="#">Mathpix 2022 | </a>
+            <a href="#">contact us</a>
+        </div>
+
+
+    </footer>
+    <script src="./style.css/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <script src="./main.js/login.js"></script>
+</body>
+
+</html>

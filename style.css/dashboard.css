@@ -1,0 +1,372 @@
+.body {
+    background-color: #F0F2F5;
+}
+
+/* <!---------------------------------- Menu ---------------------------------------------> */
+.navbar {
+    background-color: #1E2029;
+    height: auto;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    background-color: #1E2029;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 8%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: #0b93ff;
+}
+
+.show {
+    display: block;
+}
+
+.menu img {
+    width: 40%;
+}
+
+.buttonGo {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #1E2029;
+    color: white;
+    height: 90%;
+    margin: .5% 0% 0 0;
+    padding-bottom: .5%;
+    font-size: small;
+}
+
+.buttonGo:hover {
+    border: 1px solid #0b93ff;
+    color: #0b93ff;
+}
+
+.logo img {
+    width: 80%;
+}
+
+/* <!----------------------------------- Sidbar -------------------------------------------------> */
+aside {
+    border-left: 1px solid rgb(203, 202, 202);
+    height: 670px;
+}
+
+aside button {
+    border: 1px solid rgb(222, 219, 219);
+    color: #262626;
+    font-size: 14px;
+    height: 7%;
+}
+
+aside button a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #262626;
+}
+
+aside button a:hover {
+    color: #0b93ff;
+    cursor: pointer;
+}
+
+.Email,
+.subscription {
+    background-color: #F2F3F6;
+    font-size: smaller;
+}
+
+.subscription {
+    width: 12%;
+}
+
+/* -------------------------------------- Main ------------------------------------------- */
+
+.main-btn {
+    border: 1px solid gainsboro;
+    font-size: smaller;
+    height: 7%;
+}
+
+.main-btn:hover,
+.change-btn:hover {
+    border: 1px solid #0b93ff;
+    color: #0b93ff;
+}
+
+.change-btn{
+    border: 1px solid gainsboro;
+    font-size: small;
+    height: 60%;
+}
+.delete-username {
+    border: 1px solid gainsboro;
+    font-size: smaller;
+    height: 7%;
+    color: #CF222E;
+}
+
+.delete-username:hover {
+    background-color: #CF222E;
+    color: white;
+}
+
+.checkbox-privacy a {
+    text-decoration: none;
+}
+
+.checkbox-privacy input {
+    cursor: pointer;
+}
+
+.checkbox-privacy span,
+a {
+    font-size: smaller;
+}
+
+/* -------------------------------------- Modal main ---------------------------------- */
+.modal-update-email, 
+.modal-update-user,
+.modal-delete-acc {
+    display: none;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 10%;
+}
+
+.modal-content-update-email,
+.modal-content-update-user,
+.modal-content-delete-acc {
+    background-color: #fefefe;
+    margin: 1.5% auto 25%;
+    border: 1px solid #888;
+    border: 3px solid #f1f1f1;
+    width: 50%;
+}
+
+.icon-close-update-email {
+    position: absolute;
+    right: 25%;
+    top: 17%;
+    color: rgb(119, 118, 118);
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgba(36, 35, 35, 0.737);
+    border-radius: 15%;
+}
+
+.icon-close-update-user {
+    position: absolute;
+    right: 25%;
+    top: 14.8%;
+    color: rgb(119, 118, 118);
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgba(36, 35, 35, 0.737);
+    border-radius: 15%;
+}
+
+.icon-close-delete-acc {
+    position: absolute;
+    right: 25%;
+    top: 13%;
+    color: rgb(119, 118, 118);
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgba(36, 35, 35, 0.737);
+    border-radius: 15%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.label {
+    font-size: smaller;
+}
+
+.urername-update,
+.delete-accont-username {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button-update {
+    background-color: #dcdada;
+    color: rgb(123, 122, 122);
+    border: 1px solid #047DD6;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: small;
+}
+
+.button-delete-accont {
+    font-size: small;
+    background-color: #f1f0f0;
+    color: #CF222E;
+    border: 1PX solid rgb(186, 185, 185);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.warning {
+    border-bottom: 1px solid #cf222dc3;
+    border-top: 1px solid #cf222dc3;
+    background-color: #cf222d21;
+    color: #CF222E;
+    font-size: small;
+}
+
+input[type=text]::placeholder {
+    font-size: small;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* ---------------------------------------- Responsive -----------------------------*/
+@media (max-width:850px) {
+    .dropdown {
+        width: 25%;
+    }
+
+    .main aside button {
+        font-size: 70%;
+    }
+
+    .main aside button a {
+        font-size: 110%;
+    }
+
+    .modal-update-email {
+        padding-top: 35%;
+        height: 100%;
+    }
+
+    .modal-update-user{
+        padding-top: 32%;
+        height: 100%;
+    }
+    .modal-delete-acc{
+        padding-top: 29%;
+        height: 100%;
+    }
+    .icon-close-update-email {
+        right: 25%;
+    }
+}
+
+
+
+@media (min-width:851px) {
+    .modal-update-email {
+        padding-top: 30%;
+        height: 100%;
+    }
+    .modal-update-user{
+        padding-top: 18%;
+        height: 100%;
+    }
+    .modal-delete-acc{
+        padding-top: 15%;
+        height: 100%;
+    }
+    .icon-close-update-email {
+        top: 29%;
+    }
+}
+
+@media (min-width:1060px) {
+    .modal-update-email {
+        padding-top: 22%;
+        height: 100%;
+    }
+    .modal-update-user{
+        padding-top: 18%;
+        height: 100%;
+    }
+    .modal-delete-acc{
+        padding-top: 12%;
+        height: 100%;
+    }
+}
+
+@media (min-width:1280px) {
+    .modal-update-email {
+        padding-top: 18%;
+        height: 100%;
+    }
+    .modal-update-user{
+        padding-top: 11%;
+        height: 100%;
+    }
+    .modal-delete-acc{
+        padding-top: 10%;
+        height: 100%;
+    }
+}
