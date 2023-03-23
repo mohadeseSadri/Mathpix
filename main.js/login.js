@@ -1,4 +1,9 @@
 var $ = document;
+const loaderElem = document.querySelector('.loader')
+window.addEventListener("load", function(){
+  loaderElem.classList.add('hidden')
+})
+
  function _id(id_name) {
    return $.getElementById(id_name);
  }
