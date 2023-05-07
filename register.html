@@ -15,19 +15,32 @@
 
 <body class="body">
     <div class="container">
+        <div class="loader">
+            <img src="./image/Double Ring-1s-117px.gif" alt="Loading">
+        </div>
         <div class="logo d-flex justify-content-center mt-5">
-            <img src="./image/Logo.png" alt="Logo" class="img-logo img-fluid rounded d-flex justify-content-center">
+            <img src="./image/Untitled-1 copy.png" alt="Logo" class="img-logo img-fluid rounded d-flex justify-content-center">
         </div>
 
         <div class="login bg-white mt-3">
             <form action="/action_page.php" class="">
                 <h3 class="text-center pt-3">ثبت نام</h3>
                 <div class="mb-3 mt-3 icon-message">
+                    <i class="fa fa-address-card pt-2 px-4"></i>
+                    <input type="text" class="form-control px-5 mx-3" id="email"
+                        placeholder="نام خود را وارد کنید." name="email">
+                </div>
+                <div class="mb-3 mt-3 icon-message">
+                    <i class="fa fa-address-card-o pt-2 px-4"></i>
+                    <input type="number" class="form-control px-5 mx-3" id="email"
+                        placeholder="کد ملی خود را وارد کنید." name="email">
+                </div>
+                <div class="mb-3 mt-3 icon-message">
                     <i class="fa fa-envelope pt-2 px-4"></i>
                     <input type="email" class="form-control px-5 mx-3" id="email"
                         placeholder="آدرس ایمیل خود را وارد کنید." name="email">
                 </div>
-                <div class="mb-3 icon-lock">
+                <div class="mb-3 mt-3 icon-lock">
                     <i class="fa fa-lock pt-2 px-4"></i>
                     <input type="password" class="form-control px-5 mx-3" id="password-field"
                         placeholder="ساخت رمز عبور" name="pswd">
@@ -71,6 +84,11 @@
         var iconLoading = document.querySelector(".fa-spinner")
         iconLoading.addEventListener("click", function () {
             iconLoading.style.diplaye = 'inline'
+        })
+        
+        const loaderElem = document.querySelector('.loader')
+        window.addEventListener("load", function(){
+            loaderElem.classList.add('hidden')
         })
     </script>
 </body>
